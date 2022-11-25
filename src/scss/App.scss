@@ -1,0 +1,124 @@
+body {
+  background-color: #F3F3F3;
+}
+.Left {
+  float: left;
+}
+.Right {
+  float: right;
+}
+.Italic {
+  font-style: italic;
+}
+.App {
+  text-align: center;
+}
+#BlogError {
+  color: red;
+  display: none;
+}
+
+#Results {
+  & > .Card {
+    border: 2px solid lightcoral;
+    border-radius: 25px;
+    float: left;
+    margin: 15px;
+    width: 300px;
+    height: 500px;
+    overflow-y: auto;
+    & > img {
+      max-height: 250px;
+      max-width: 250px;
+      margin-right: 15px;
+      margin-left: 15px;
+      border-radius: 25px;
+      margin-top: 15px;
+    }
+    & > p:last-child {
+      margin: 15px;
+    }
+  }
+  & > .Article {
+    margin: 15px auto;
+    width: 90%;
+    background-color: white;
+    padding: 25px;
+    & > p {
+      text-align: left;
+      overflow-x: auto;
+    }
+    & > .Author {
+      font-weight: bold;
+      font-size: larger;
+    }
+    & > .Buttons {
+      text-align: right;
+      & > buttons {
+        margin-left: 5px;
+      }
+      & > .Cancel {
+        display: none;
+      }
+    }
+  }
+}
+
+#Blog {
+  & > .Form {
+    margin: 15px auto;
+    width: 50%;
+    & > input, & > textarea {
+      margin: 15px 0;
+      display: block;
+      width: 100%;
+      border: 2px solid lightcoral;
+      border-radius: 5px;
+      padding: 3px;
+    }
+    & > input:focus, & > textarea:focus {
+      border: 2px solid crimson;
+      outline: 0;
+    }
+    & > textarea {
+      min-height: 75px;
+    }
+    & button {
+      width: 150px;
+      height: 25px;
+      background-color: salmon;
+      border: 2px solid lightcoral;
+      border-radius: 5px;
+    }
+    & button:hover {
+      filter:saturate(1.5);
+      border: 2px solid gold;
+    }
+    & button:active {
+      filter:saturate(2);
+      border: 2px solid greenyellow;
+      font-weight: bold;
+    }
+  }
+  & > #Results > .Article > textarea {
+    width: 100%;
+    margin: 16px 0;
+  }
+}
+
+.Form > .Form-Buttons {
+  text-align: right;
+}
+
+#Nav {
+  display: flex;
+  font-size: 20px;
+  & > div {
+    margin: 10px;
+    & > a {
+      color: lightcoral;
+      text-decoration: none;
+      padding: 10px;
+    }
+  }
+}
